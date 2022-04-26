@@ -1,3 +1,5 @@
+
+
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -57,6 +59,10 @@ nav {
     text-decoration: none;
 }
 
+.link a {
+    cursor: pointer;
+}
+
 .divider {
     display: none;
 }
@@ -67,7 +73,8 @@ nav {
     background-image: url('../img/blooming-flowers.png');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 700px;
+    padding-bottom: 100px;
+    min-height: 100vh;
 }
 
 #intro-section {
@@ -90,6 +97,143 @@ nav {
     margin-bottom: 30px;
 }
 
+
+/* CONTACT SECTION */
+
+#contact-section {
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 70px 40px;
+}
+
+#send-mail {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+#send-mail input , textarea {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: solid #ffffff 2px;
+    height: 50px;
+    width: 100%;
+    min-width: 400px;
+    padding: 10px;
+    font-weight: 700;
+}
+
+textarea#message {
+    height: 180px;
+    font-family: 'Poppins', sans-serif;
+    resize: none;
+}
+
+#send-mail input::placeholder {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.7;
+    font-weight: 700;
+}
+
+#send-mail button {
+    width: 100px;
+    height: 50px;
+}
+
+#other-info {
+    width: 100%;
+}
+
+#other-info ul {
+    display: grid;
+    gap: 20px;
+}
+
+#other-info ul li a {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto 1fr;
+}
+
+#other-info a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* SKILLS STYLES */
+
+#skills-section {
+    padding: 40px 40px;
+}
+
+#skills-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    justify-items: center;
+}
+
+.skill {
+    background-image: url('../img/blooming-flowers.png');
+    background-size: cover;
+    width: 80%;
+    max-width: 350px;
+}
+
+.skill-stat-list {
+    background-color: #000000d6;
+    color: #ffffff;
+    padding: 40px 30px;
+    display: grid;
+    gap: 30px;
+    height: 200px;
+}
+
+.skill-stat {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+.skill-stat .hearts img {
+    width: 18px;
+}
+
+.rating {
+    position: absolute;
+    right: 0;
+}
+
+.skill .caption {
+    background-color: #FFFFFF;
+    padding: 20px;
+    height: 150px;
+}
+
+.skill .caption p {
+    padding: 10px;
+    width: 90%;
+}
+
+.skill .caption .heading-3 {
+    font-size: 24px;
+    display: grid;
+    grid-template-columns: auto auto;
+    position: relative;
+}
+
+.caption .heading-3 img {
+    position: absolute;
+    right: 0;
+}
+
+/* EXTRA */
 .active {
     border-bottom: solid #F11717 5px;
 }
@@ -102,6 +246,10 @@ nav {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
 }
+
+
+
+/* FOOTER STYLES */
 
 #website-footer {
     background-color: #F0FD71;
@@ -142,6 +290,8 @@ nav {
 }
 
 /* Tab Styles */
+
+
 
 @media screen and (min-width : 750px) {
     #website-header {
@@ -207,6 +357,16 @@ nav {
     }
 }
 
+/* STYLES FOR CONTACT PAGE TO BE SET */
+@media screen and (min-width : 850px) {
+    #contact-section {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        padding: 70px 40px;
+        gap: 50px;
+    }
+}
+
 
 
 /* Desktop Styles */
@@ -229,5 +389,35 @@ nav {
     #intro-section {
         padding: 50px 100px;
     }
+    
+    #other-info a p {
+        font-size: 20px;
+    }
+
+    #other-info img {
+        width: 25px;
+    }
+
+    #skills-list {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        justify-content: space-between;
+    }
 }
 
+
+
+
+
+/* Set Extra Pages to No Display */
+#intro-section {
+    display: none;
+}
+
+#contact-section {
+    display: none;
+}
+
+#skills-section {
+    display: none;
+}
