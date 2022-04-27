@@ -122,7 +122,7 @@ nav {
     border: solid #ffffff 2px;
     height: 50px;
     width: 100%;
-    min-width: 400px;
+    min-width: 300px;
     padding: 10px;
     font-weight: 700;
 }
@@ -166,7 +166,7 @@ textarea#message {
 }
 
 
-/* SKILLS STYLES */
+/* SKILLS STYLES
 
 #skills-section {
     padding: 40px 40px;
@@ -231,7 +231,7 @@ textarea#message {
 .caption .heading-3 img {
     position: absolute;
     right: 0;
-}
+} */
 
 /* EXTRA */
 .active {
@@ -242,9 +242,33 @@ textarea#message {
     color: black;
     background-color: #F0FD71;
     border: none;
-    padding: 5px 10px;
+    padding: 10px 15px;
     font-family: 'Poppins', sans-serif;
+    font-weight: 500;
     font-size: 16px;
+}
+
+.primary-button:hover {
+    cursor: pointer;
+}
+
+#work-section {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 50px;
+}
+
+#work-div {
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    padding: 50px;
+    gap: 50px;
+}
+
+#work-section .sub-heading-1 {
+    font-size: 2em;
+    text-align: center;
 }
 
 
@@ -262,8 +286,8 @@ textarea#message {
 
 #social-links {
     display: grid;
-    gap: 10px;
-    grid-template-columns: repeat( 5 , auto);
+    gap: 30px;
+    grid-template-columns: repeat( 3 , auto);
     justify-content: center;
     font-size: 20px;
     font-weight: 700;
@@ -312,7 +336,7 @@ textarea#message {
     }
 
     .nav-links {
-        grid-template-columns: repeat( 7 , auto);
+        grid-template-columns: repeat( 5 , auto);
         justify-content: right;
         font-weight: 700;
     }
@@ -418,6 +442,6 @@ textarea#message {
     display: none;
 }
 
-#skills-section {
+#work-section {
     display: none;
 }

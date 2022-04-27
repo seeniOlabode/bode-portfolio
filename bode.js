@@ -64,7 +64,7 @@ function Tab (searchID , navID) {
 
 tabsArray.push( new Tab ('intro-section', 'intro-nav'));
 tabsArray.push( new Tab ('contact-section' , 'contact-nav'));
-tabsArray.push( new Tab ('skills-section' , 'skill-nav'));
+tabsArray.push( new Tab ('work-section' , 'work-nav'))
 
 
 const setTab = (input) => {
@@ -98,64 +98,39 @@ const setIntro = () => {
     handleTab('intro-section');
 }
 
-const setSkills = () => {
-    handleTab('skills-section');
+const setContact = () => {
+    handleTab('contact-section');
 }
 
-const setContacts = () => {
-    handleTab('contact-section');
+const setWork = () => {
+    handleTab('work-section');
 }
 
 
 // Event Listener 
 
 tabsArray[0].NavElement.addEventListener('click' , setIntro);
-tabsArray[1].NavElement.addEventListener('click' , setContacts);
-tabsArray[2].NavElement.addEventListener('click' , setSkills);
+tabsArray[1].NavElement.addEventListener('click' , setContact);
+tabsArray[2].NavElement.addEventListener('click' , setWork)
 
 
 // Set Intro 
 
-handleTab( 'intro-section');
+setIntro();
 
 
+// Form Stuff
 
 
+const emailBox = document.getElementById('email');
+const subjectBox = document.getElementById('subject');
+const textBox = document.getElementById('message');
+const sendButton = document.getElementById('send');
 
-// Cursor Stuff
-
-
-const $bigBall = document.querySelector('.cursor__ball--big');
-const $smallBall = document.querySelector('.cursor__ball--small');
-const $hoverables = document.querySelectorAll('.hoverable');
-
-// Listeners
-document.body.addEventListener('mousemove', onMouseMove);
-for (let i = 0; i < $hoverables.length; i++) {
-  $hoverables[i].addEventListener('mouseenter', onMouseHover);
-  $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
-}
-
-// Move the cursor
-function onMouseMove(e) {
-  TweenMax.to($bigBall, .4, {
-    x: e.pageX - 15,
-    y: e.pageY - 15 });
-
-  TweenMax.to($smallBall, .1, {
-    x: e.pageX - 5,
-    y: e.pageY - 7 });
-
-}
-
-// Hover an element
-function onMouseHover() {
-  TweenMax.to($bigBall, .3, {
-    scale: 4 });
-
-}
-function onMouseHoverOut() {
-  TweenMax.to($bigBall, .3, {
-    scale: 1 });
-
+const sendEmail = () => {
+    if ( emailBox.value.length > 5 && subjectBox.value.length > 5 && textBox.value.length > 5 ) {
+        window.open(`mailto:seeniolabode8734@gmail.com?subject=${subjectBox.value}&bod${textBox.value}`)
+    } else {
+        alert('Invalid Email Attempt');
+    }
 }
