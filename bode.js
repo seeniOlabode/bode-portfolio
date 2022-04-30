@@ -55,16 +55,17 @@ menuButton.addEventListener("click" , responsiveMenu);
 
 const tabsArray = [];
 
-function Tab (searchID , navID) {
+function Tab (searchID , navID, boxtype) {
     this.Name = searchID;
     this.Element = document.getElementById(searchID);
     this.NavElement = document.getElementById(navID);
+    this.BoxType = boxtype;
     this.Display = false;
 }
 
-tabsArray.push( new Tab ('intro-section', 'intro-nav'));
-tabsArray.push( new Tab ('contact-section' , 'contact-nav'));
-tabsArray.push( new Tab ('work-section' , 'work-nav'))
+tabsArray.push( new Tab ('intro-section', 'intro-nav' , 'block'));
+tabsArray.push( new Tab ('contact-section' , 'contact-nav' , 'grid'));
+tabsArray.push( new Tab ('work-section' , 'work-nav' , 'block'))
 
 
 const setTab = (input) => {
@@ -72,7 +73,7 @@ const setTab = (input) => {
         return tab.Name === input;
     });
     workingTab[0].Display = true;
-    workingTab[0].Element.style.display = 'block';
+    workingTab[0].Element.style.display = workingTab[0].BoxType;
     workingTab[0].NavElement.classList.add('active');
 }
 
@@ -129,7 +130,7 @@ const sendButton = document.getElementById('send');
 
 const sendEmail = () => {
     if ( emailBox.value.length > 5 && subjectBox.value.length > 5 && textBox.value.length > 5 ) {
-        window.open(`mailto:seeniolabode8734@gmail.com?subject=${subjectBox.value}&bod${textBox.value}`)
+        window.open(`mailto:seeniolabode8734@gmail.com?subject=${subjectBox.value}&body${textBox.value}`)
     } else {
         alert('Invalid Email Attempt');
     }

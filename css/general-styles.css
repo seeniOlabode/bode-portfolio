@@ -379,6 +379,7 @@ textarea#message {
         position: absolute;
         right: 50px;
     }
+    
 }
 
 /* STYLES FOR CONTACT PAGE TO BE SET */
@@ -398,7 +399,7 @@ textarea#message {
 
 @media screen and (min-width : 1150px) {
     #website-header {
-        padding: 50px 100px;
+        padding: 50px 170px;
     }
 
     .logo-text {
@@ -411,7 +412,7 @@ textarea#message {
     }
 
     #intro-section {
-        padding: 50px 100px;
+        padding: 50px 170px;
     }
     
     #other-info a p {
@@ -426,6 +427,20 @@ textarea#message {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
         justify-content: space-between;
+    }
+
+    #website-footer {
+        padding-left: 170px;
+        padding-right: 170px;
+    }
+
+    #resume {
+        right: 170px;
+    }
+
+    #contact-section {
+        padding-left: 170px;
+        padding-right: 170px;
     }
 }
 
@@ -444,4 +459,13 @@ textarea#message {
 
 #work-section {
     display: none;
+}
+
+
+
+/* Animation */
+
+#page-nav {
+    transition: diplay 4s ease 1s;
+
 }
